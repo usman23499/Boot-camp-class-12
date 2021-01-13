@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" style="width: 100px; height: 100px; background-color: aqua;">
+
+    </div>
+
+<script>
+
+var ele=document.getElementById('main');
+// ele.animate([],{}) actual asa hai
+
+ele.animate([
+
+{transform:'translate(0,0)'}, // take two 0 0 first 0 is x axis and second 0 is y-axis and 
+//yahan lagan trastale mean move ho start ho 0 0 se 
+{transform:'translate(600px,0)'}, // move 600px x-axis
+{transform:'translate(0,0)'}, // moave back to zero
+
+],
+{
+    duration: 1500, // 15 miliseond
+    iterations:Infinity // infinity main rahe ga
+}) 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('./Images/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            /* to cover pic full dom */
+
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="cloud">
+
+    <img src="./Images/cloud1.gif"  alt="">  
+    <img src="./Images/cloud1.gif" id="cloud" alt="">  
+
+    <img src="./Images/cloud1.gif" id="cloud" alt="">  
+    <img src="./Images/cloud1.gif" id="cloud" alt="">  
+
+    <img src="./Images/cloud1.gif" id="cloud" alt="">  
+
+    <img src="./Images/cloud1.gif" id="cloud" alt="">  
+
+    </div>
+    
+
+
+    <script>
+
+        var ele=document.getElementById('cloud');
+
+        var setannimation=ele.animate([
+        {transform:'translate(100px,400px)'},
+        {transform:'translate(0px,0px)'}, // is ke bad ek or aanimation hai is lea slow aaraha hai warna bhot fast 0 0 per aaje ga
+        {transform:'translate(100px,400px)'},
+        ],{
+            duration:4000,
+            iterations:Infinity
+        })
+
+        document.addEventListener("mousedown",()=>{
+            setannimation.pause(); // on mouse click stop ho je ga
+        })
+        
+        document.addEventListener("mouseup",()=>{
+            setannimation.play(); // on mouse click resume ho je ga
+        })
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>

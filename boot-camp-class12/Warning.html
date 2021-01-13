@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #main{
+            width: 300px; 
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="main" >
+        <h2>
+            Warning
+        </h2>
+    </div>
+
+<script>
+
+var ele=document.querySelector('#main');
+// ele.animate([],{}) actual asa hai
+
+ele.animate([
+
+// scale 1 mean 100 %
+
+{transform:'scale(0.5)' , background :'white',color:'white'}, // 0.5 scale start
+{transform:'scale(1.0)' , background :'red',color:'white' }, // got 1
+{transform:'scale(0.5)', background :'white' ,color:'white'}, // phir 1 se 0.5 pe aae
+// sab main baraber ke properties honge
+],
+{
+    duration: 3000, // 4 seond
+    iterations:Infinity // infinity main rahe ga
+}) 
+
+</script>
+
+</body>
+</html>

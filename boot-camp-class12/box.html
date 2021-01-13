@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" style="width: 100px; height: 100px; background-color: aqua;">
+
+    </div>
+
+<script>
+
+var ele=document.getElementById('main');
+// ele.animate([],{}) actual asa hai
+
+ele.animate([
+// {transform:'translate(400px,400px)'},  for move dignol
+
+
+{transform:'translate(0,0)' , background :'aqua'}, 
+{transform:'translate(400px,0)' , background :'blue' }, // move 400px x-axis
+{transform:'translate(400px,400px)', background :'red'}, // from 400px x-axix move 400px y-axis
+{transform:'translate(0px,400px)', background :'pink'}, // from 400px y-axix move 0px x-axis
+{transform:'translate(0,0)'}, // moave back to zero now both x and y axis is zerp
+
+],
+{
+    duration: 4000, // 4 seond
+    iterations:Infinity // infinity main rahe ga
+}) 
+
+</script>
+
+</body>
+</html>
